@@ -385,7 +385,7 @@ func (m GeoIP2) ServeHTTP(w http.ResponseWriter, r *http.Request, next caddyhttp
 			repl.Set("geoip2.traits_userCount", record.Traits.UserCount)
 			repl.Set("geoip2.traits_static_ip_score", record.Traits.StaticIpScore)
 
-			caddy.Log().Named("http.handlers.geoip2").Debug(fmt.Sprintf("ServeHTTP %v %v %v", m, record, clientIP))
+			//caddy.Log().Named("http.handlers.geoip2").Debug(fmt.Sprintf("ServeHTTP %v %v %v", m, record, clientIP))
 		}
 
 	}
